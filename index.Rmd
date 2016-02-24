@@ -24,6 +24,6 @@ plot(cars)
 chart 2 under here
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-
+source('secondChart.R')
 ```
 
