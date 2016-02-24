@@ -30,8 +30,8 @@ chart1 <- function(data) {
     y = SuperFans,
     name = "Super Fans" ) %>% layout(title = "Seahawk Fans by Class", barmode = "stack", xaxis = list(title = "Class Standing"))
   
-  #returns plot
-  return(p)
+  #creates plot
+  p
 }
 
 
