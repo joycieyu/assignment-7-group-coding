@@ -5,16 +5,16 @@ output: html_document
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 library(dplyr)
 library(plotly)
-library(jsonlite)
 library(knitr)
 setwd("/Users/Joycie/info498f/assignment-7-group-coding")
 source("scripts/summary.R")
 source("scripts/secondChart.R")
+source("scripts/firstChart.R")
 
 data <- read.csv("https://raw.githubusercontent.com/INFO-498F/a7-survey-data/master/intro_survey_data.csv")
 ```
 
-### This is a report on the survey students in INFO 498F Winter 2016 took before starting the course.
+This is a report on the survey students in INFO 498F Winter 2016 took before starting the course. The survey asked students a list of `r info_function(data) [['length']]` questions that described students' coding experience as well as random facts. 
 Here are some facts we have found: <br>
  1. There are `r info_function(data) [['Seahawks_fan']]` Seahawks fans <br>
  2. There are also `r info_function(data) [['info_intended']]`  intended Informatics majors <br>
@@ -29,10 +29,11 @@ Here are some facts we have found: <br>
 kable(info_function(data)[['class_standing']])
 ```
 
-### This chart shows
+### This chart shows the number of Seahawks fans by class
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 # makes first plot 
+chart1(data)
 ```
 
 ### This is second plot will compare the number of people who understand Terminal.
