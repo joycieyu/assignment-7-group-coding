@@ -1,0 +1,29 @@
+---
+title: "And The Survey Says..."
+output: html_document
+---
+
+This is a report on the survey students in INFO 498f Winter 2016 took before starting the course.
+facts:
+1.
+2.
+3.
+
+summary table under here
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+summary(cars)
+```
+
+chart 1 under here
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+plot(cars)
+```
+
+chart 2 under here
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+```
+
