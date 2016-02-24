@@ -5,9 +5,6 @@
 require(plotly)
 require(dplyr)
 
-#reads the survey data
-data <- read.csv("https://raw.githubusercontent.com/INFO-498F/a7-survey-data/master/intro_survey_data.csv")
-
 #function that creates a graph about the number of seahawk fans to class standings 
 chart1 <- function(data) {
   #creates a simple dataframe related to seahawk fans
@@ -31,11 +28,13 @@ chart1 <- function(data) {
   p <- add_trace(
     p,
     y = SuperFans,
-    name = "Super Fans" ) %>% layout(barmode = "stack", xaxis = list(title = "Class Standing"))
+    name = "Super Fans" ) %>% layout(title = "Seahawk Fans by Class", barmode = "stack", xaxis = list(title = "Class Standing"))
   
   #returns plot
   return(p)
 }
+
+
 
 
 
