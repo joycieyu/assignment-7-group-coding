@@ -2,28 +2,41 @@
 title: "And The Survey Says..."
 output: html_document
 ---
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(plotly)
+library(jsonlite)
+library(knitr)
+setwd("/Users/Joycie/info498f/assignment-7-group-coding")
+source("scripts/summary.R")
+source("scripts/secondChart.R")
+
+data <- read.csv("https://raw.githubusercontent.com/INFO-498F/a7-survey-data/master/intro_survey_data.csv")
+```
 
 This is a report on the survey students in INFO 498f Winter 2016 took before starting the course.
-facts:
-1.
-2.
-3.
+Here are some facts we have found:
+1. There are 67 Seahawks fans
+2. There are also 67  intended Informatics majors
+3. The person who has visited the most countries has visited 26 countries
 
 summary table under here
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-summary(cars)
+# makes summary table
+info_function(data)
 ```
 
 chart 1 under here
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-plot(cars)
+# makes first plot 
 ```
 
 chart 2 under here
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-source('secondChart.R')
+# makes second plot of the number of people who understood Terminal 
+make_plot(data)
 ```
 
