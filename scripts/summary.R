@@ -1,7 +1,6 @@
 library(dplyr)
 
-# read in dataset
-data <- read.csv("https://raw.githubusercontent.com/INFO-498F/a7-survey-data/master/intro_survey_data.csv")
+
 
 # A function that takes in a dataset and returns a list of info about it:
 info_function <- function(dataset) {
