@@ -24,6 +24,7 @@ info_function <- function(dataset) {
   # number of students interested in info major
   ret$info_intended <- length(grep('Y', data$Are.you.interested.in.applying.to.the.Informatics.major.))
  
+
   return (ret)
 }
 
