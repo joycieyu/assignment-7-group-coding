@@ -8,7 +8,7 @@ require(dplyr)
 #reads the survey data
 data <- read.csv("https://raw.githubusercontent.com/INFO-498F/a7-survey-data/master/intro_survey_data.csv")
 
-#function that creates a graph about the seahawk fans in the survey
+#function that creates a graph about the number of seahawk fans to class standings 
 chart1 <- function(data) {
   #creates a simple dataframe related to seahawk fans
   data_seahawks <- data %>% group_by(What.is.your.current.class.standing.) %>% 
